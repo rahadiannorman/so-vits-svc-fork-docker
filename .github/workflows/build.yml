@@ -16,8 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get the Dockerfile
-        run: wget https://raw.githubusercontent.com/voicepaw/so-vits-svc-fork/main/Dockerfile
+      - name: Check Out Repository
+        uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
         id: buildx
