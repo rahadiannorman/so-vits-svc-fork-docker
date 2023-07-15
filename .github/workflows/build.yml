@@ -49,3 +49,5 @@ jobs:
           tags: ${{ steps.img_meta.outputs.tags }}
           labels: ${{ steps.img_meta.outputs.labels }}
           push: true
+          cache-from: type=gha,mode=max
+          cache-to: type=gha,mode=max
