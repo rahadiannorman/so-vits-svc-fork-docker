@@ -14,4 +14,4 @@ RUN apt-get update \
 # Works for caching
 ADD https://api.github.com/repos/voicepaw/so-vits-svc-fork/releases/latest /tmp/latest-release
 RUN pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu118 \
-    && pip install -U so-vits-svc-fork
+    && pip install -U so-vits-svc-fork vastai
