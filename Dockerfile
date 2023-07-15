@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors "https://github.com/Hazmi35 & https://git
 
 # Ubuntu 22.04 python3 is python3.10, no need for any PPA.
 RUN apt-get update \
-    && apt-get install --no-install-recommends -y python3 python3-pip build-essential nano htop \
+    && apt-get install --no-install-recommends -y python3 python3-pip build-essential nano htop zip unzip \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
