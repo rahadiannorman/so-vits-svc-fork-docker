@@ -13,13 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Out Repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-
-      #- name: Set up QEMU (We don't need QEMU, because we don't build images for platforms other than linux/amd64
-      #  uses: docker/setup-qemu-action@v2
+      - name: Get the Dockerfile
+        run: wget https://raw.githubusercontent.com/voicepaw/so-vits-svc-fork/main/Dockerfile
 
       - name: Set up Docker Buildx
         id: buildx
